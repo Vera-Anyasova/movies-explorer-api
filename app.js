@@ -7,15 +7,14 @@ const { errors } = require("celebrate");
 const routes = require("./routes/index");
 const handleErrors = require("./middlewares/handleErrors");
 const { requestLogger, errorLogger } = require("./middlewares/logger");
-const { limiter } = require("./middlewares/limiter");
 const allowedCors = require("./constants");
+const { limiter } = require("./middlewares/limiter");
 
 require("dotenv").config();
 const { PORT, MONGODB_URI } = require("./config");
 
 const app = express();
 app.use(helmet());
-app.use(limiter);
 
 app.options(
   "*",
@@ -50,6 +49,7 @@ mongoose
 
 app.use(requestLogger);
 app.use(routes);
+app.use(limiter);
 
 app.use(errorLogger);
 app.use(errors());

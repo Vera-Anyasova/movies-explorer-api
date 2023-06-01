@@ -4,4 +4,4 @@
 
 IP 51.250.88.144
 
-Backend https://api.vera.anyasova.student.nomoredomains.monster
+Backend https://api.movies-vera.nomoredomains.rocks
