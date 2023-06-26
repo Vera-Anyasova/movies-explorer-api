@@ -55,3 +55,26 @@ module.exports.deleteMovie = (req, res, next) => {
     })
     .catch(next);
 };
+
+const updateDataCard = (req, res, updateData, next) => {
+  Movie.findByIdAndUpdate(req.params.movieId, updateData, { new: true })
+    .populate(["owner", "likes"])
+    .then((movie) => {
+      if (movie) {
+        res.send(movie);
+      } else {
+        throw new NotFoundError("Фильм не найден");
+      }
+    })
+    .catch(next);
+};
+
+module.exports.addLike = (req, res, next) => {
+  const updateData = { $addToSet: { likes: req.user._id } };
+  updateDataCard(req, res, updateData, next);
+};
+
+module.exports.removeLike = (req, res, next) => {
+  const updateData = { $pull: { likes: req.user._id } };
+  updateDataCard(req, res, updateData, next);
+};
