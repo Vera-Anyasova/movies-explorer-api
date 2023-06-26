@@ -57,7 +57,7 @@ module.exports.deleteMovie = (req, res, next) => {
 };
 
 const updateDataCard = (req, res, updateData, next) => {
-  Movie.findByIdAndUpdate(req.params.movieId, updateData, { new: true })
+  Movie.findByIdAndUpdate(req.params._id, updateData, { new: true })
     .populate(["owner", "likes"])
     .then((movie) => {
       if (movie) {
