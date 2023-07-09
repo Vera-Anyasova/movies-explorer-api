@@ -8,8 +8,6 @@ const {
   getMovies,
   createMovie,
   deleteMovie,
-  addLike,
-  removeLike,
 } = require("../controllers/movies");
 
 router.get("/", getMovies);
