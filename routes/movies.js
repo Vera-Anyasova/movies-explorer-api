@@ -16,10 +16,6 @@ router.get("/", getMovies);
 
 router.post("/", movieValidation, createMovie);
 
-router.put("/:_id/likes", movieIdValidation, addLike);
-
-router.delete("/:_id/likes", movieIdValidation, removeLike);
-
 router.delete("/:_id", movieIdValidation, deleteMovie);
 
 module.exports = router;
