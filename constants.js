@@ -4,8 +4,8 @@ const regex =
 const allowedCors = [
   "https://localhost:3000",
   "http://localhost:3000",
-  "https://51.250.88.144",
-  "http://51.250.88.144",
+  "https://158.160.109.19",
+  "http://158.160.109.19",
 ];
 
 const STATUS_BAD_REQUEST = 400;
