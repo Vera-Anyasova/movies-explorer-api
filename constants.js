@@ -2,6 +2,8 @@ const regex =
   /(https?:\/\/)?([\da-z\\.-]+)\.([a-z\\.]{2,6})([\\/\w\\.-]*[\w.,@?^=%&:\\/~+#-])*\/?/;
 
 const allowedCors = [
+  "https://movies-vera.nomoredomains.xyz",
+  "http://movies-vera.nomoredomains.xyz",
   "https://localhost:3000",
   "http://localhost:3000",
   "https://158.160.109.19",
