@@ -6,8 +6,8 @@ const allowedCors = [
   "http://movies-vera.nomoredomains.xyz",
   "https://localhost:3000",
   "http://localhost:3000",
-  "https://158.160.109.19",
-  "http://158.160.109.19",
+  "https://158.160.32.106",
+  "http://158.160.32.106",
 ];
 
 const STATUS_BAD_REQUEST = 400;
